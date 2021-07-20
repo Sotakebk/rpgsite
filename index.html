@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Epic RPG</title>
+    <meta name="description" content="RPG-site" />
+    <meta name="author" content="Sota" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-ui.css" />
+    <link rel="stylesheet" href="css/style-maps.css" />
+    <link rel="stylesheet" href="css/style-specific.css" />
+    <link rel="stylesheet" id="css-hideWhenMoving" href="css/style-hideWhenMoving.css" />
+  </head>
+  <body>
+    <div id="body_inner">
+      <div id="container" onclick="Fullscreenize()">
+        <div id="transformer">
+          <!-- maps and elements -->
+          <div class="map" id="map01">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object hideWhenMoving" id="man2">
+              <img src="img/objects/man2.png" class="bottom" />
+              <img src="img/objects/man2.png" class="top" />
+            </div>
+            <div class="object hideWhenMoving" id="skates" onclick="SkatesClicked()">
+              <img src="img/objects/skates.png" class="bottom" />
+              <img src="img/objects/skates.png" class="top" />
+            </div>
+            <div class="text hideWhenMoving">I have nothing for free</div>
+          </div>
+          <div class="map" id="map03">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object hideWhenMoving" id="man1">
+              <img src="img/objects/man1.png" class="bottom" />
+              <img src="img/objects/man1.png" class="top" />
+            </div>
+            <div class="object interactive hideWhenMoving" id="gun" onclick="PickedUpGun()">
+              <img src="img/objects/ak47.png" class="bottom" />
+              <img src="img/objects/ak47.png" class="top" />
+            </div>
+            <div class="text hideWhenMoving">
+              Its dangerous <br />
+              to go alone <br />
+              take this!
+            </div>
+          </div>
+          <div class="map" id="map10">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <img src="img/objects/portrait1.png" class="object inactive_border hideWhenMoving" id="portrait1" />
+            <div class="text hideWhenMoving" id="name1">Sotake</div>
+            <div class="text hideWhenMoving" id="sub1">CEO, Lead developer</div>
+          </div>
+          <div class="map" id="map11">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object interactive hideWhenMoving" id="fb" onclick="openInNewTab('sub/social.html')">
+              <img src="img/objects/facebook.png" class="bottom" />
+              <img src="img/objects/facebook.png" class="top" />
+            </div>
+          </div>
+          <div class="map" id="map12">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+          </div>
+          <div class="map" id="map13">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object" id="bridge1">
+              <img src="img/objects/bridge1.png" class="bottom" />
+              <img src="img/objects/bridge1.png" class="top" />
+            </div>
+            <div class="object" id="bridge2">
+              <img src="img/objects/bridge2.png" class="bottom" />
+              <img src="img/objects/bridge2.png" class="top" />
+            </div>
+          </div>
+          <div class="map" id="map14">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object interactive hideWhenMoving" id="heart" onclick="PickedUpHeart()">
+              <img src="img/objects/heart.png" class="bottom" />
+              <img src="img/objects/heart.png" class="top" />
+            </div>
+            <div class="text hideWhenMoving">
+              100!
+              <br />
+              Game
+              <br />
+              Studio
+            </div>
+          </div>
+          <div class="map" id="map21">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+          </div>
+          <div class="map" id="map22">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object hideWhenMoving interactive" id="goblin_cave" onclick="CaveGoblinClicked()">
+              <img src="img/objects/goblin.png" class="bottom" />
+              <img src="img/objects/goblin.png" class="top" />
+            </div>
+            <div class="object hideWhenMoving" id="gold" onclick="GoldClicked()">
+              <img src="img/objects/gold.png" class="bottom" />
+              <img src="img/objects/gold.png" class="top" />
+            </div>
+          </div>
+          <div class="map" id="map23">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object hideWhenMoving" id="goblin_lever" onclick="LeverGoblinClicked()">
+              <img src="img/objects/goblin.png" class="bottom" />
+              <img src="img/objects/goblin.png" class="top" />
+            </div>
+            <div class="object hideWhenMoving" id="lever1" onclick="LeverClicked()">
+              <img src="img/objects/lever1.png" class="bottom" />
+              <img src="img/objects/lever1.png" class="top" />
+            </div>
+            <div class="object hideWhenMoving" id="lever2" onclick="Lever2Clicked()">
+              <img src="img/objects/lever2.png" class="bottom" />
+              <img src="img/objects/lever2.png" class="top" />
+            </div>
+          </div>
+          <div class="map" id="map31">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+          </div>
+          <div class="map" id="map32">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+          </div>
+          <div class="map" id="map33">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+          </div>
+          <div class="map" id="map34">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+          </div>
+          <div class="map" id="map41">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+          </div>
+          <div class="map" id="map42">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object interactive hideWhenMoving" id="spooky" onclick="openInNewTab('sub/recruitment.html')">
+              <img src="img/objects/spooky.png" class="bottom" />
+              <img src="img/objects/spooky.png" class="top" />
+            </div>
+            <div class="text hideWhenMoving">We need somebody like you...</div>
+          </div>
+          <div class="map" id="map44">
+            <img src="img/objects/mc.png" class="mc hideWhenMoving" />
+            <div class="object hideWhenMoving interactive" id="skeleton_1" onclick="ClickSkele(0)">
+              <img src="img/objects/skeleton.png" class="bottom" />
+              <img src="img/objects/skeleton.png" class="top" />
+            </div>
+            <div class="object hideWhenMoving interactive" id="skeleton_2" onclick="ClickSkele(1)">
+              <img src="img/objects/skeleton.png" class="bottom" />
+              <img src="img/objects/skeleton.png" class="top" />
+            </div>
+            <div class="object hideWhenMoving interactive" id="skeleton_3" onclick="ClickSkele(2)">
+              <img src="img/objects/skeleton.png" class="bottom" />
+              <img src="img/objects/skeleton.png" class="top" />
+            </div>
+          </div>
+          <div class="map" id="map54">
+            <div class="object hideWhenMoving interactive mc" onclick="openInNewTab('sub/end.html')">
+              <img src="img/objects/mc.png" class="bottom" />
+              <img src="img/objects/mc.png" class="top" />
+            </div>
+            <div class="text hideWhenMoving">The End <br />Congratulations! </div>
+          </div>
+        </div>
+        <!-- UI elements -->
+        <div class="arrow hideWhenMoving interactive" id="up" onclick="Up()">
+          <img src="img/objects/arrow_up.png" class="active_border border" />
+          <img src="img/objects/arrow_up.png" class="top" />
+        </div>
+        <div class="arrow hideWhenMoving interactive" id="down" onclick="Down()">
+          <img src="img/objects/arrow_down.png" class="active_border border" />
+          <img src="img/objects/arrow_down.png" class="top" />
+        </div>
+        <div class="arrow hideWhenMoving interactive" id="left" onclick="Left()">
+          <img src="img/objects/arrow_left.png" class="active_border border" />
+          <img src="img/objects/arrow_left.png" class="top" />
+        </div>
+        <div class="arrow hideWhenMoving interactive" id="right" onclick="Right()">
+          <img src="img/objects/arrow_right.png" class="active_border border" />
+          <img src="img/objects/arrow_right.png" class="top" />
+        </div>
+        <img src="img/objects/heart.png" class="itemObject inactive_border hideWhenMoving" id="heart_1" />
+        <img src="img/objects/heart.png" class="itemObject inactive_border hideWhenMoving" id="heart_2" />
+        <img src="img/objects/heart.png" class="itemObject inactive_border hideWhenMoving" id="heart_3" />
+        <img src="img/objects/heart.png" class="itemObject inactive_border hideWhenMoving" id="heart_4" />
+        <img src="img/objects/ak47.png" class="itemObject inactive_border hideWhenMoving" id="item_gun" />
+        <img src="img/objects/gold.png" class="itemObject inactive_border hideWhenMoving" id="item_gold" />
+        <img src="img/objects/skates.png" class="itemObject inactive_border hideWhenMoving" id="item_skates" />
+        <div class="overlay" id="overlay">
+          <img src="img/intro/intro_devices.png" class="intropart" id="intro_devices" />
+          <div class="intropart interactive" id="intro_play" onclick="IntroPlay()">
+            <img src="img/intro/intro_play.png" class="active_border intro_full" />
+            <img src="img/intro/intro_play.png" class="intro_full" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

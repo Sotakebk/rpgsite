@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Pixel;
+    src: url('../arcade.ttf');
+}
+
+body {
+    font-family: Pixel;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    image-rendering: pixelated;
+    user-select: none;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+#body_inner {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: background-color 1.5s cubic-bezier(0.4, 0, 1, 1);
+}
+
+#container {
+    pointer-events: all;
+    overflow: hidden;
+    height: calc(3/4*95vw);
+    max-height: 95vh;
+    width: 95vw;
+    max-width: calc(4/3*95vh);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 20px 2px #000000ba;
+    user-select: none;
+    pointer-events: none;
+}
+
+#transformer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#transformer.transition {
+    transition: all 1.5s linear;
+}
+
+.text {
+    position: absolute;
+    display: block;
+    font-size: 8vmin;
+    text-align: center;
+}
+
+.interactive {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.inactive_border {
+    filter: drop-shadow(0 3px 0 #f0f0f055) drop-shadow(0 -3px 0 #f0f0f055) drop-shadow(-3px 0 0 #f0f0f055) drop-shadow(3px 0 0 #f0f0f055) drop-shadow(0 0 4px #f0f0f055);
+}
+
+.active_border {
+    animation: blink 0.8s linear alternate infinite;
+}
+
+.dissapear {
+    animation: 0.7s fadeout steps(1, end) running forwards;
+}
+
+.disabled {
+    display: none!important;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    from {
+        filter: drop-shadow(0 1px 0 #fffb0022) drop-shadow(0 -1px 0 #fffb0022) drop-shadow(-1px 0 0 #fffb0022) drop-shadow(1px 0 0 #fffb0022) drop-shadow(0 0 2px #fffb0033);
+    }
+    to {
+        filter: drop-shadow(0 3px 0 #e7e54a) drop-shadow(0 -3px 0#e7e54a) drop-shadow(-3px 0 0 #e7e54a) drop-shadow(3px 0 0 #e7e54a) drop-shadow(0 0 6px #000000);
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.overlay.animate {
+    animation: 0.5s overlay_hide linear both;
+}
+
+@keyframes overlay_hide {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.intropart {
+    position: absolute;
+}
+
+#intro_devices {
+    height: 60%;
+    top: 15%;
+    left: 3%;
+}
+
+.intro_full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#intro_play {
+    height: 23vmin;
+    width: 23vmin;
+    right: 19%;
+    top: 32%;
+}

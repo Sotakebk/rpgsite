@@ -1,0 +1,317 @@
+.mc {
+    position: absolute;
+    width: 6.25%;
+    filter: drop-shadow(0 3px 0 #f0f0f055) drop-shadow(0 -3px 0 #f0f0f055) drop-shadow(-3px 0 0 #f0f0f055) drop-shadow(3px 0 0 #f0f0f055) drop-shadow(0 0 4px #f0f0f055);
+}
+
+.object {
+    position: absolute;
+    width: 6.25%;
+    height: 8.333%;
+}
+
+.object .bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: drop-shadow(0 3px 0 #f0f0f055) drop-shadow(0 -3px 0 #f0f0f055) drop-shadow(-3px 0 0 #f0f0f055) drop-shadow(3px 0 0 #f0f0f055) drop-shadow(0 0 4px #f0f0f055);
+}
+
+.object.interactive .bottom {
+    animation: blink 0.8s linear alternate infinite;
+}
+
+@keyframes blink {
+    from {
+        filter: drop-shadow(0 3px 0 #fffb0022) drop-shadow(0 -3px 0 #fffb0022) drop-shadow(-3px 0 0 #fffb0022) drop-shadow(3px 0 0 #fffb0022) drop-shadow(0 0 6px #fffb0033);
+    }
+    to {
+        filter: drop-shadow(0 3px 0 #e7e54a) drop-shadow(0 -3px 0#e7e54a) drop-shadow(-3px 0 0 #e7e54a) drop-shadow(3px 0 0 #e7e54a) drop-shadow(0 0 6px #000000);
+    }
+}
+
+.object .top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#map01 .mc {
+    top: 62.25%;
+    left: 45.25%;
+}
+
+#map01 #man2 {
+    top: 40%;
+    left: 45%;
+}
+
+#map01 .text {
+    top: 16%;
+    left: 7%;
+    right: 12%;
+    font-size: 6vmin;
+    color: white;
+    filter: drop-shadow(0 0 2px black);
+}
+
+#map01 #skates {
+    top: 50%;
+    left: 34%;
+}
+
+#map03 .mc {
+    top: 62.25%;
+    left: 80.25%;
+}
+
+#map03 #man1 {
+    top: 44%;
+    right: 45%;
+}
+
+#map03 #gun {
+    top: 57%;
+    left: 32%;
+}
+
+#map03 .text {
+    top: 15%;
+    left: 13%;
+    right: 13%;
+    font-size: 6vmin;
+    color: white;
+    filter: drop-shadow(0 0 2px black);
+}
+
+#map10 .mc {
+    top: 74.25%;
+    left: 47.25%;
+}
+
+#map10 #portrait1 {
+    top: 15%;
+    left: 10%;
+    width: 12.5%;
+    height: 16.66%;
+}
+
+#map10 .text {
+    color: white;
+    filter: drop-shadow(0 0 2px black);
+}
+
+#map10 #name1 {
+    top: 7%;
+    left: 10%;
+    font-size: 6vmin;
+}
+
+#map10 #sub1 {
+    font-size: 4vmin;
+    right: 5%;
+    top: 16%;
+}
+
+#map10 #portrait2 {
+    width: 12.5%;
+    height: 16.66%;
+    top: 45%;
+    left: 73%;
+}
+
+#map10 #name2 {
+    top: 36%;
+    right: 5%;
+    font-size: 6vmin;
+}
+
+#map10 #sub2 {
+    top: 45%;
+    left: 5%;
+    font-size: 4vmin;
+}
+
+#pk {
+    bottom: 22%;
+    left: 27%;
+    width: 12.5%;
+    height: 16.66%;
+}
+
+#map11 .mc {
+    top: 46.25%;
+    left: 47.25%;
+}
+
+#map11 #fb {
+    top: 13.5%;
+    left: 65%;
+}
+
+#map12 .mc {
+    top: 39.25%;
+    left: 47.25%;
+}
+
+#map13 .mc {
+    top: 50.25%;
+    left: 47.25%;
+}
+
+#map13 #bridge1 {
+    width: 25%;
+    height: 16.6666%;
+    top: 0%;
+    left: 37.5%;
+}
+
+#map13 #bridge2 {
+    width: 25%;
+    height: 16.6666%;
+    top: 0%;
+    left: 37.5%;
+}
+
+#map13 #bridge2 .bottom {
+    filter: none;
+}
+
+#map14 .mc {
+    top: 59.25%;
+    left: 17.25%;
+}
+
+#map14 #heart {
+    top: 25%;
+    left: 73%;
+}
+
+#map14 .text {
+    top: 60%;
+    left: 60%;
+    color: white;
+}
+
+#map21 .mc {
+    top: 52.25%;
+    left: 54.25%;
+}
+
+#map22 .mc {
+    top: 23.25%;
+    left: 52.25%;
+}
+
+#map22 #goblin_cave {
+    top: 46%;
+    left: 47%;
+}
+
+#map22 #gold {
+    top: 65%;
+    left: 29%;
+}
+
+#map23 .mc {
+    top: 57.25%;
+    left: 10.25%;
+}
+
+#map23 #goblin_lever {
+    top: 54%;
+    left: 29%;
+}
+
+#map23 #lever1 {
+    left: 63%;
+    top: 58%;
+}
+
+#map23 #lever2 {
+    left: 63%;
+    top: 58%;
+}
+
+#map31 .mc {
+    top: 57.25%;
+    left: 10.25%;
+}
+
+#map32 .mc {
+    top: 47.25%;
+    left: 47.25%;
+}
+
+#map33 .mc {
+    top: 24.25%;
+    left: 47.25%;
+}
+
+#map34 .mc {
+    top: 53.25%;
+    left: 52.25%;
+}
+
+#map41 .mc {
+    top: 59.25%;
+    left: 47.25%;
+}
+
+#map42 .mc {
+    top: 15.25%;
+    left: 18.25%;
+}
+
+#map42 #spooky {
+    top: 66%;
+    left: 73%;
+}
+
+#map42 .text {
+    font-size: 5vmin;
+    top: 24%;
+    left: 35%;
+    right: 5%;
+    color: white;
+    filter: drop-shadow(0 0 2px black);
+}
+
+#map44 .mc {
+    top: 47.25%;
+    left: 19.25%;
+}
+
+#map44 #skeleton_1 {
+    top: 38%;
+    left: 41%;
+}
+
+#map44 #skeleton_2 {
+    top: 65%;
+    left: 59%;
+}
+
+#map44 #skeleton_3 {
+    top: 45%;
+    left: 76%;
+}
+
+#map54 .mc {
+    top: 59.25%;
+    left: 47.25%;
+}
+
+#map54 .text {
+    top: 24%;
+    left: 6%;
+    right: 25%;
+    font-size: 5vmin;
+    filter: drop-shadow(0 0 2px black);
+    color: #ffffff;
+}
